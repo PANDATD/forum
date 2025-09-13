@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>{{ category.name }}</h2>
+<ul class="list-group">
+    {% for thread in category.threads %}
+        <li class="list-group-item">{{ thread.title }}</li>
+    {% else %}
+        <li class="list-group-item">No threads yet.</li>
+    {% endfor %}
+</ul>
+{% endblock %}
